@@ -155,7 +155,9 @@ LOGGING = {
         },
     },
 }
-GRAPPELLI_ADMIN_TITLE = f"{os.environ.get('PROJECT_NAME', 'Django Blueprint Project').capitalize()} - version: {PROJECT_VERSION}."
+
+GRAPPELLI_ADMIN_TITLE = \
+    f"{os.environ.get('PROJECT_NAME', 'Django Blueprint Project').capitalize()} - version: {PROJECT_VERSION}."
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 CORS_ORIGIN_ALLOW_ALL = True

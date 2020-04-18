@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+
 def generate_ticket_id():
     # Generate a unique ticket id.
     return str(uuid.uuid4()).split('-')[-1]
@@ -22,7 +23,7 @@ class Ticket(models.Model):
         return f"{self.title}-{self.ticket_id}"
 
     def save(self, *args, **kwargs):
-        if len(self.ticket_id.strip(" "))==0:
+        if len(self.ticket_id.strip(" ")) == 0:
             self.ticket_id = generate_ticket_id()
 
         #  Call the parent save() method.

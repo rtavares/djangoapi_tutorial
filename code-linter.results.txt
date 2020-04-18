@@ -1,8 +1,5 @@
 Linter run at
-Sat Apr 18 18:19:50 BST 2020
+Sat Apr 18 19:57:10 BST 2020
 Running flake8
 Running pycodestyle
-scripts/../project/project/settings/base.py:157:121: E501 line too long (130 > 120 characters)
-scripts/../project/project/settings/pytest.py:27:1: W391 blank line at end of file
-scripts/../project/scripts/__init__.py:9:4: W292 no newline at end of file
 Code linting finished

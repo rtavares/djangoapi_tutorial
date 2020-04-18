@@ -24,4 +24,3 @@ DATABASES = {
         'PORT': DATABASE_PORT,
     }
 }
-
