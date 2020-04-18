@@ -1,0 +1,17 @@
+Source:
+    Django project:
+        Medium - Oyetoke Tobi Emmanuel
+        https://medium.com/fbdevclagos/building-future-web-apps-with-javascript-and-django-c831883b22cf
+        https://medium.com/fbdevclagos/building-a-rest-api-endpoint-for-ticket-app-with-django-part1-3213d8622c9d
+        https://medium.com/@oyetoketoby80/building-a-rest-api-endpoint-for-ticket-app-with-django-part2-f60163545995
+
+    Dockerizing:
+        https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/
+
+Docker issue:
+    https://stackoverflow.com/questions/36236491/docker-compose-gives-error-cannot-locate-specified-dockerfile-dockerfile
+Docker compose docs:
+    https://docs.docker.com/compose/compose-file/#context
+
+Psycopg2 issue:
+    https://github.com/psycopg/psycopg2/issues/684

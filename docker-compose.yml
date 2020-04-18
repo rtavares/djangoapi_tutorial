@@ -1,0 +1,47 @@
+version: '3.7'
+
+services:
+  djangoapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ${PROJECT_CONTAINER_NAME}
+    env_file:
+      - ./.env
+    command: /${PROJECT_WORK_DIR}/scripts/start_project.sh
+    volumes:
+      - .:/${PROJECT_WORK_DIR}
+    # Local dev / debug purposes.
+    stdin_open: true
+    tty: true
+    ports:
+      - ${WSGI_PORT}:${WSGI_PORT}
+    # ---
+    depends_on:
+      - ${PROJECT_NAME}_db
+    networks:
+      - ${DOCKER_NETWORK_NAME}
+
+  djangoapi_db:
+    image: postgres:12.0-alpine
+    container_name: ${DB_CONTAINER_NAME}
+    volumes:
+      - postgres_data:/var/lib/potgresql/data/
+    ports:
+      #      Local development only
+      - ${DATABASE_EXPOSE_PORT}:5432
+    environment:
+      - POSTGRES_DB=${DATABASE_NAME}
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_PASSWORD=${DATABASE_PASS}
+    networks:
+      - ${DOCKER_NETWORK_NAME}
+
+networks:
+#  TODO: Check the usage of variables in 'networks'
+#  ${DOCKER_NETWORK_NAME}:
+  djangoapi_NET:
+volumes:
+  postgres_data:
+
+

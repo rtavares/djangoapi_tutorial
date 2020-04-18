@@ -1,0 +1,13 @@
+# System specific's and IDE's files and folders
+# should be referred in a global  ~/.gitignore file.
+
+.env
+*.pyc
+*.sqlite
+*.sqlite3
+secret_key.py
+
+media/
+static/
+
+__pycache__
